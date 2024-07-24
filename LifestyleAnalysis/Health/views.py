@@ -9,3 +9,6 @@ def main(request):
 
 def login_employee(request):
     return render(request,'login.html',{})
+
+def homepage(request):
+    return render(request,'hp.html',{})

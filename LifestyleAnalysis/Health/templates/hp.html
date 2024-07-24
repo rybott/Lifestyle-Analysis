@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="sidebar" id="sidebar-wrapper">
+            <div class="sidebar-heading">Logo</div>
+            <div class="sidebar-heading">Ryan Bonanni-Bott</div>
+
+
+            <ul class="menu">
+                <li><a href="#" class="menu-item"><i class="icon">🏠</i> Home</a></li>
+                <li><a href="#" class="menu-item"><i class="icon">📊</i> Statistics</a></li>
+                <li><a href="#" class="menu-item"><i class="icon">📅</i> Calendar</a></li>
+                <li><a href="#" class="menu-item"><i class="icon">⚙️</i> Settings</a></li>
+            </ul>
+        </div>
+        <div class="main-content" id="page-content-wrapper">
+            <div class="navbar">
+                <button class="toggle-btn" id="menu-toggle">☰</button>
+            </div>
+            <div class="content">
+                <h1>Welcome to Your Dashboard</h1>
+                <p>This is where your main content will be displayed.</p>
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
+
