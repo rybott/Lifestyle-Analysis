@@ -3,6 +3,7 @@ from django.db import models
 # Ingredients Table
 class Ingredient(models.Model):
     name = models.CharField(max_length=100)
+    quantity = models.PositiveIntegerField()
     portion_grams = models.FloatField()
     ounces = models.FloatField()
     calories = models.FloatField()
