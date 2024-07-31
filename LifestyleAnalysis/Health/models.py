@@ -1,4 +1,26 @@
 from django.db import models
+from django.utils import timezone
+
+class Net_kcal(models.Model):
+    date = models.DateField(default=timezone.now)
+    cal_in = models.PositiveIntegerField()
+    cal_out_apple = models.PositiveIntegerField()
+    cal_out_app = models.PositiveIntegerField()
+
+class Workout(models.Model):
+    type = models.CharField(max_length=100)
+
+class Activity(models.Model):
+    date = models.DateField()
+    workout_ID = models.ForeignKey(Workout, on_delete=models.CASCADE)
+    duration_min = models.PositiveIntegerField()
+    kcal_out = models.PositiveIntegerField()
+    miles = models.PositiveSmallIntegerField()
+
+'''
+Other Tables that I am not using for now
+----------------------------------------------------------------------------------
+
 
 # Ingredients Table
 class Ingredient(models.Model):
@@ -71,3 +93,5 @@ class KcalIn(models.Model):
     homemade_meal = models.ForeignKey(HomemadeMeal, on_delete=models.SET_NULL, null=True, blank=True)
     recipe = models.ForeignKey(Recipe, on_delete=models.SET_NULL, null=True, blank=True)
     quantity_grams = models.FloatField()
+    
+'''

@@ -1,10 +1,8 @@
 from django.contrib import admin
-from .models import Ingredient,PremadeMeal,HomemadeMeal,Recipe,RecipeIngredient,KcalIn
+from .models import Net_kcal, Workout, Activity
 
 # Register your models here.
-admin.site.register(Ingredient)
-admin.site.register(PremadeMeal)
-admin.site.register(HomemadeMeal)
-admin.site.register(Recipe)
-admin.site.register(RecipeIngredient)
-admin.site.register(KcalIn)
+admin.site.register(Net_kcal)
+admin.site.register(Workout)
+admin.site.register(Activity)
+
