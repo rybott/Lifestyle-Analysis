@@ -1,7 +1,12 @@
 from django.db import models
 
+class Categories(models.Model):
+    category = models.CharField(max_length=50)
 
 class Transactions(models.Model):
-    fname = models.CharField(max_length=50, null=True, blank=True)  # First Name
-    lname = models.CharField(max_length=50, null=True, blank=True)  # Last Name
-    phone = models.CharField(max_length=11, null=True, blank=True) 
+    date = models.DateTimeField()
+    account = models.CharField(max_length=50)
+    transaction_type = models.CharField(max_length=50)
+    description = models.CharField(max_length=200)
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    category = models.ForeignKey(Categories, on_delete=models.CASCADE)
