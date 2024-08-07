@@ -12,3 +12,15 @@
 ### Notes
 - Discover Data: Downloaded as of 08/06/2024
 - Chase Data: Downloaded as of 08/06/2024  
+
+
+
+
+# Finance Calcs
+- 1pt / $1 spent
+   - 3 pts for dinning and chase travel
+
+- 1pt = $ 0.0125 
+- 90,000 pt = $1,250
+
+
